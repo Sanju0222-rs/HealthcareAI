@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Appointments</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <div class="topbar">
+        <h4>My Appointments</h4>
+
+        <div>
+            <a href="/patient/dashboard" class="btn btn-outline-primary">Dashboard</a>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-hover mt-4">
+
+        <thead class="table-dark">
+        <tr>
+            <th>Appointment ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr th:each="a : ${appointments}">
+            <td th:text="${a.appointmentId}"></td>
+            <td th:text="${a.patientName}"></td>
+            <td th:text="${a.doctorName}"></td>
+            <td th:text="${a.appointmentDate}"></td>
+            <td th:text="${a.appointmentTime}"></td>
+            <td>
+                <span class="badge bg-success" th:text="${a.status}"></span>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>

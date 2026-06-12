@@ -1,0 +1,157 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+}
+
+.navbar-brand{
+    font-size: 1.6rem;
+    font-weight: 700;
+    
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn-primary{
+    border-radius:10px;
+}
+
+.dashboard-card{
+    padding:20px;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+/* Sidebar */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    position:fixed;
+}
+
+.logo{
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid #334155;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+.sidebar ul li:hover{
+    background:#1e293b;
+}
+
+.content{
+    margin-left:260px;
+    width:100%;
+}
+
+.dashboard-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.auth-body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.auth-wrapper{
+    width:90%;
+    max-width:1100px;
+    min-height:600px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+.auth-left{
+    background:linear-gradient(135deg,#5f7681,#2563eb);
+    color:white;
+    padding: 70px;
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
+    
+}
+
+.auth-left h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.auth-left p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.auth-card{
+    padding:70px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.auth-card h2{
+    font-weight:700;
+}
+
+.form-control{
+    height:48px;
+    border-radius:12px;
+}
+
+.btn-primary{
+    height:48px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+    .auth-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .auth-left{
+        display:none;
+    }
+    .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    background:white;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+}
